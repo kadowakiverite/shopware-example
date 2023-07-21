@@ -1,0 +1,18 @@
+{
+  "name": "nao/plugin-example",
+  "description": "Example plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Nao\\Example\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "Nao\\Example\\NaoExample",
+    "label": {
+      "de-DE": "Example plugin",
+      "en-GB": "Example plugin"
+    }
+  }
+}
