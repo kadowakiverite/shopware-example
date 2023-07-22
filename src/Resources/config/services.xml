@@ -9,5 +9,17 @@
             <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService" />
             <tag name="kernel.event_subscriber"/>
         </service>
+
+        <service id="Nao\Example\Command\ExampleCommand">
+            <tag name="console.command"/>
+        </service>
+
+        <service id="Nao\Example\Service\ScheduledTask\ExampleTask">
+            <tag name="shopware.scheduled.task"/>
+        </service>
+        <service id="Nao\Example\Service\ScheduledTask\ExampleTaskHandler">
+            <argument type="service" id="scheduled_task.repository"/>
+            <tag name="messenger.message_handler"/>
+        </service>
     </services>
 </container>
